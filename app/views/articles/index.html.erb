@@ -1,0 +1,8 @@
+<h1 class="mt-3">My articles</h1>
+<div class="m-3"> ➕<%= link_to 'Add an article', new_article_path , class: "btn btn-primary"%></div>
+
+<ul class="m-3 list-group">
+  <% @articles.each do |article| %>
+    <li class="w-25 p-3 list-group-item text-center card m-3"><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>
