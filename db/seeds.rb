@@ -7,9 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
+Article.destroy_all
+
 10.times do
   Article.create(
-    title: Faker::Games::Zelda.game,
-    content: Faker::Games::Zelda.location
+    title: Faker::Movies::StarWars.character,
+    content: Faker::Movies::StarWars.quote
   )
 end
